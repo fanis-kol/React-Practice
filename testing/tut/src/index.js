@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDom from "react-dom"
+import './index.css';
 
 function BooκList() {
    return (
-      <section>
+      <section className="booklist">
          <Book />
+         <Book />
+         <Book />
+         <Book />
+         <Book />
+         <Book />
+
       </section>
 
    );
@@ -12,7 +19,7 @@ function BooκList() {
 
 const Book = () => {
    return (
-      <article>
+      <article className="book">
          <Image />
          <Title />
          <Author />
@@ -27,7 +34,7 @@ const Image = () => (
 )
 
 const Title = () => (
-   <h1>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h1>
+   <h3>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h3>
 )
 
 const Author = () => (
