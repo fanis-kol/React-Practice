@@ -1,17 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from "react-dom"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function BooκList() {
+   return (
+      <section>
+         <Book />
+      </section>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+   );
+}
+
+const Book = () => {
+   return (
+      <article>
+         <Image />
+         <Title />
+         <Author />
+      </article>
+   );
+};
+
+const Image = () => (
+   <img
+      src="https://images-na.ssl-images-amazon.com/images/I/713mzPe9SwS._AC_UL200_SR200,200_.jpg" alt=""
+   />
+)
+
+const Title = () => (
+   <h1>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h1>
+)
+
+const Author = () => (
+   <h1> James Clear (Author) </h1>
+)
+
+
+
+ReactDom.render(<BooκList />, document.getElementById('root'));
