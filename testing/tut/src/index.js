@@ -26,7 +26,7 @@ function BooκList() {
    );
 }
 
-const Book = ({ props }) => {
+const Book = (props) => {
    const { img, title, author } = props
    return (
       <article className="book">
