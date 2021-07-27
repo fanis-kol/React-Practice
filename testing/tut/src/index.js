@@ -41,14 +41,23 @@ function BooκList() {
 const Book = ({ img, title, author }) => {
    const clickHandler = () => {
       alert("hello world");
-   }
+   };
+   const complexExample = (author) => {
+      console.log(author);
+   };
    return (
-      <article className="book">
+      <article className="book" onMouseOver={() => {
+         console.log()
+      }}>
          <img src={img} alt="" />
-         <h1>{title}</h1>
+         <h1 onClick={() => console.log(title)}>{title}</h1>
          <h4>{author}</h4>
          <button type="button" onClick={clickHandler}>
             reference example
+         </button>
+         <button type="button" onMouseOver={() => complexExample(author)
+         }>
+            more complexExample
          </button>
       </article>
    );
